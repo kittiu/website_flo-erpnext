@@ -1,0 +1,56 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const title = "บล็อก — ความรู้ ERPNext สำหรับธุรกิจไทย | Flo Works";
+const description =
+  "บทความเกี่ยวกับ ERPNext สำหรับธุรกิจไทย: ERPNext คืออะไร คุ้มไหม ย้ายจากระบบเดิมอย่างไร เทียบกับ Odoo/SAP และวิธีวางระบบให้สำเร็จ";
+---
+
+<Base title={title} description={description}>
+  <section class="hero container">
+    <p class="eyebrow">บล็อก / ความรู้</p>
+    <h1>เขียนจากประสบการณ์วางระบบจริง<br />ไม่ใช่บทความ SEO ล้วน ๆ</h1>
+    <p class="lead" style="max-width: 60ch">
+      เราเขียนสิ่งที่ลูกค้าถามเราจริง ๆ ระหว่างวางระบบ — เรื่องค่าใช้จ่าย การย้ายข้อมูล
+      การเลือก ERP และสิ่งที่ควรรู้ก่อนเริ่มโปรเจกต์
+    </p>
+  </section>
+
+  <section class="section container">
+    {
+      posts.length === 0 ? (
+        <p class="muted">กำลังเตรียมบทความแรก — กลับมาเร็ว ๆ นี้</p>
+      ) : (
+        <div class="article-list">
+          {posts.map((post) => (
+            <article class="article-item">
+              <p class="meta">
+                {post.data.date.toLocaleDateString("th-TH", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}{" "}
+                · {post.data.author}
+              </p>
+              <h2><a href={`/blog/${post.slug}/`}>{post.data.title}</a></h2>
+              <p class="muted">{post.data.description}</p>
+            </article>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>มีคำถามที่ไม่อยากเสิร์ชหาคำตอบเอง?</h2>
+      <p>ถามเราได้ตรง ๆ — เราตอบจากประสบการณ์วางระบบ ERPNext ให้ธุรกิจไทย</p>
+      <a class="btn" href="/contact/">ถามเรา</a>
+    </div>
+  </section>
+</Base>

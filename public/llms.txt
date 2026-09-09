@@ -1,0 +1,15 @@
+# Flo Works Limited — ERPNext implementation for Thai businesses
+
+> Flo Works Limited (Floworks) is an ERPNext implementation company in Bangkok, Thailand. We help Thai SMEs and growing companies implement ERPNext — the open-source ERP (GPLv3) covering accounting, sales, purchasing, inventory, manufacturing, HR and CRM — with Thai tax and accounting localization (VAT, withholding tax, e-Tax Invoice/Receipt). No per-user license fees, no vendor lock-in. Content is in Thai.
+
+## Pages
+
+- [หน้าแรก — Home](https://flo-erpnext.example.com/): What we do: ERPNext implementation in Thailand, zero license cost, Thai localization.
+- [บริการ ERPNext Implementation](https://flo-erpnext.example.com/services/): Full implementation service — discovery, blueprint, configuration & Thai localization, data migration, training, go-live, support/AMC. 5 phases with timelines and FAQ.
+- [เกี่ยวกับเรา](https://flo-erpnext.example.com/about/): About Flo Works Limited — why open-source ERP, working principles.
+- [บล็อก — Blog](https://flo-erpnext.example.com/blog/): Thai articles about ERPNext for Thai SMEs.
+- [ติดต่อเรา — Contact](https://flo-erpnext.example.com/contact/): sales@flo-works.co, +66 81 841 7480, Silom Edge, Bangkok.
+
+## Blog posts
+
+- [ERPNext คืออะไร เหมาะกับ SME ไทยแค่ไหน คุ้มไหมในปี 2026](https://flo-erpnext.example.com/blog/erpnext-khue-arai-sme-thai/): What ERPNext is, how it compares to proprietary ERP, fit for Thai SMEs, Thai tax localization, and the real cost structure (no license, but implementation/hosting/support).

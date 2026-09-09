@@ -1,0 +1,39 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const title = `${post.data.title} | Flo Works`;
+const description = post.data.description;
+---
+
+<Base title={title} description={description}>
+  <article class="container" style="max-width: 820px; padding-top: 4rem; padding-bottom: 4rem">
+    <p class="eyebrow">บล็อก</p>
+    <h1>{post.data.title}</h1>
+    <p class="muted mono" style="margin-bottom: 2.4rem">
+      {post.data.date.toLocaleDateString("th-TH", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })}{" "}
+      · {post.data.author}
+    </p>
+    <div class="article-body">
+      <Content />
+    </div>
+    <hr />
+    <p>
+      <a href="/blog/"><b>← กลับไปหน้าบล็อก</b></a>
+    </p>
+  </article>
+</Base>

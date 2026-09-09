@@ -1,0 +1,210 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Flo Works Limited — ERPNext Implementation สำหรับธุรกิจไทย";
+const description =
+  "ทีมวางระบบ ERPNext ในประเทศไทย — ERP เปิดซอร์ส ครบทุกฟังก์ชัน ไม่มีค่า license รายหัว ไม่มี vendor lock-in ปรับแต่งตามกระบวนการธุรกิจ และรองรับภาษี/บัญชีไทย";
+---
+
+<Base title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Flo Works Limited",
+    description: "ERPNext implementation partner สำหรับธุรกิจไทย — ERP เปิดซอร์ส ครบทุกฟังก์ชัน ไม่มีค่า license",
+    url: "https://flo-erpnext.example.com/",
+    email: "sales@flo-works.co",
+    telephone: "+66 81 841 7480",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "2 Silom Edge Building, 10th Floor Room S10063, Silom Road, Suriyawong, Bangrak",
+      addressLocality: "Bangkok",
+      postalCode: "10500",
+      addressCountry: "TH",
+    },
+  })} />
+
+  <!-- Hero -->
+  <section class="hero container">
+    <p class="eyebrow">เปิดซอร์ส ERP · บริการวางระบบในประเทศไทย</p>
+    <h1>ระบบเดียว ครบทุกฟังก์ชัน.<br />ค่า License = 0 บาท.</h1>
+    <p class="lead">
+      ERPNext คือ ERP เปิดซอร์สที่ครอบคลุมบัญชี การขาย การซื้อ คลังสินค้า การผลิต HR และ CRM
+      ในระบบเดียว — โดยไม่มีค่า license ต่อผู้ใช้ เราช่วยให้ธุรกิจไทยได้ ERP ระดับองค์กร
+      ที่เป็นเจ้าของซอร์สโค้ดและข้อมูลเอง ไม่ผูกขาดกับผู้ขายรายใด
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn--lg" href="/contact/">ปรึกษาฟรี 30 นาที</a>
+      <a class="btn btn--ghost btn--lg" href="/services/">ดูขั้นตอนการวางระบบ</a>
+    </div>
+    <div class="hero-meta">
+      <span>100% Open Source · GPLv3</span>
+      <span>ไม่มี license รายหัว</span>
+      <span>ปรับแต่งได้เต็มรูปแบบ</span>
+      <span>ข้อมูลอยู่ในมือคุณ</span>
+    </div>
+  </section>
+
+  <!-- Why ERPNext -->
+  <section class="section container">
+    <p class="eyebrow">01 — เหตุผล</p>
+    <h2>ทำไม ERP เปิดซอร์ส ถึงเปลี่ยนสมการค่าใช้จ่ายของ ERP</h2>
+    <p class="lead" style="max-width: 66ch">
+      ธุรกิจส่วนใหญ่จ่ายค่า license ซ้ำทุกปีให้ซอฟต์แวร์ ERP ที่ซื้อมาครั้งเดียว
+      ERPNext กลับด้านสมการ: ตัวซอฟต์แวร์เปิดซอร์สและฟรี (GPLv3)
+      สิ่งที่คุณจ่ายคือค่า <b>วางระบบ</b> <b>ปรับแต่ง</b> และ <b>ดูแล</b> — ซึ่งคือคุณค่าที่เรามอบให้จริง ๆ
+    </p>
+
+    <table class="compare" style="margin-top: 2rem">
+      <thead>
+        <tr>
+          <th scope="col">เกณฑ์</th>
+          <th scope="col" class="is-best">ERPNext</th>
+          <th scope="col">Odoo (Enterprise)</th>
+          <th scope="col">SAP Business One</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">ค่า license รายปี / ต่อผู้ใช้</th>
+          <td class="is-best check">0 บาท — เปิดซอร์ส</td>
+          <td>จ่ายรายปีต่อผู้ใช้ต่อโมดูล</td>
+          <td>สูง ขึ้นกับขนาดผู้ใช้และโมดูล</td>
+        </tr>
+        <tr>
+          <th scope="row">โมดูลหลัก (บัญชี ขาย ซื้อ คลัง ผลิต HR CRM)</th>
+          <td class="is-best check">ครบในระบบเดียว</td>
+          <td>บางส่วนต้องซื้อ Enterprise เพิ่ม</td>
+          <td>หลายโมดูลต้องซื้อเสริม</td>
+        </tr>
+        <tr>
+          <th scope="row">ความเป็นเจ้าของซอร์สโค้ดและข้อมูล</th>
+          <td class="is-best check">คุณ 100%</td>
+          <td>ถูกจำกัดโดยผู้ขาย</td>
+          <td>ปิด — เป็นของผู้ขาย</td>
+        </tr>
+        <tr>
+          <th scope="row">การปรับแต่งระบบ</th>
+          <td class="is-best check">เต็มรูปแบบ ไม่มีค่าใช้จ่ายแฝง</td>
+          <td>จำกัด หรือเสียค่าใช้จ่ายสูง</td>
+          <td>จำกัด และแพง</td>
+        </tr>
+        <tr>
+          <th scope="row">ระยะเวลาขึ้นระบบ (SME ทั่วไป)</th>
+          <td class="is-best check">ประมาณ 4–12 สัปดาห์</td>
+          <td>ประมาณ 3–6 เดือน</td>
+          <td>ประมาณ 6–12 เดือน</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size: 0.85rem; margin-top: 0.8rem">
+      * ตัวเลขระยะเวลาเป็นค่าประมาณจากโครงการทั่วไป ขึ้นอยู่กับขนาดและความซับซ้อนของธุรกิจ
+    </p>
+  </section>
+
+  <!-- Modules -->
+  <section class="section container">
+    <p class="eyebrow">02 — ฟังก์ชัน</p>
+    <h2>ทุกฟังก์ชันธุรกิจ เชื่อมถึงกันในระบบเดียว</h2>
+    <p class="lead" style="max-width: 66ch">
+      ข้อมูลหนึ่งชุดไหลต่อเนื่องตั้งแต่ใบเสนอราคา → ใบสั่งขาย → วางบิล → รับเงิน → บัญชี
+      ไม่ต้องคีย์ซ้ำ ไม่ต้อง sync ระหว่างโปรแกรมบัญชี โปรแกรมสต็อก และ Excel
+    </p>
+    <ul class="tags" style="margin-top: 1.6rem">
+      <li>บัญชี / การเงิน</li>
+      <li>VAT และภาษีไทย</li>
+      <li>ขาย / CRM</li>
+      <li>ซื้อ / จัดซื้อ</li>
+      <li>คลังสินค้า</li>
+      <li>การผลิต / BOM</li>
+      <li>HR / เงินเดือน</li>
+      <li>โปรเจกต์ / บริการ</li>
+      <li>รายงาน / Dashboard</li>
+      <li>Mobile / Web</li>
+      <li>API ครบ</li>
+      <li>e-Tax Invoice</li>
+    </ul>
+  </section>
+
+  <!-- Why Floworks -->
+  <section class="section container">
+    <p class="eyebrow">03 — ทำไม Floworks</p>
+    <h2>เราไม่ได้แค่ติดตั้งซอฟต์แวร์<br />เราวางระบบให้เข้ากับวิธีที่ธุรกิจคุณทำงานจริง</h2>
+    <div class="grid grid-2" style="margin-top: 2rem">
+      <div class="card">
+        <h3>เข้าใจบริบทไทย — ภาษี บัญชี และกระบวนการ</h3>
+        <p>
+          วางผังบัญชี ตั้งค่า VAT ภาษีหัก ณ ที่จ่าย e-Tax Invoice/Receipt และรายงานภาษี
+          ให้สอดคล้องกับวิธีทำบัญชีของธุรกิจไทย ตั้งแต่เริ่มแรก ไม่ใช่ดัดทีหลัง
+        </p>
+      </div>
+      <div class="card">
+        <h3>วางระบบตามกระบวนการ ไม่ยัดเยียด template</h3>
+        <p>
+          เราศึกษากระบวนการจริงของคุณก่อน แล้วค่อยออกแบบโครงสร้างข้อมูลและ workflow
+          ให้ตรงกับวิธีทำงาน — ERP ที่ดีคือระบบที่คนใช้แล้วไม่ต้องดัดงานให้เข้าระบบ
+        </p>
+      </div>
+      <div class="card">
+        <h3>คุณเป็นเจ้าของระบบ ไม่มี vendor lock-in</h3>
+        <p>
+          ซอร์สโค้ด ข้อมูล และเซิร์ฟเวอร์อยู่ในมือคุณ อยากเปลี่ยนทีมดูแล อยากย้ายคลาวด์
+          หรือให้ทีมในบริษัทดูแลเอง ก็ทำได้ ไม่มีใครมาขังคุณไว้
+        </p>
+      </div>
+      <div class="card">
+        <h3>ดูแลหลัง go-live อย่างจริงจัง</h3>
+        <p>
+          วางระบบจบไม่ใช่จบงาน — เราอยู่กับคุณต่อด้วยการฝึกอบรม การสนับสนุนหลังขึ้นระบบ
+          และสัญญาบำรุงรักษา (AMC) ที่ตอบสนองจริงเมื่อธุรกิจคุณต้องการ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process teaser -->
+  <section class="section container">
+    <p class="eyebrow">04 — กระบวนการ</p>
+    <h2>วิธีที่เราทำให้ ERP ขึ้นระบบอย่างไม่พังงบประมาณ<br />และไม่พังการปิดบัญชีเดือน</h2>
+    <p class="lead" style="max-width: 66ch">
+      วางระบบเป็นระยะ มีขอบเขตชัดเจน ตรวจสอบได้ทุกขั้นตอน ตั้งแต่ศึกษากระบวนการ
+      ออกแบบผังบัญชี ย้ายข้อมูล ตั้งค่าระบบ จนถึง go-live และดูแลหลังวางระบบ
+    </p>
+    <div class="grid grid-2" style="margin-top: 2rem">
+      <div class="card">
+        <h3>ระยะที่ 1 — ค้นหาและออกแบบ</h3>
+        <p>สัมภาษณ์กระบวนการ ออกแบบผังบัญชี กำหนดขอบเขตโครงการ และประมาณการค่าใช้จ่ายที่โปร่งใส</p>
+      </div>
+      <div class="card">
+        <h3>ระยะที่ 2 — ตั้งค่าและปรับแต่ง</h3>
+        <p>ตั้งค่าระบบตามแบบ ตั้งค่าภาษีไทย และปรับแต่งเฉพาะที่จำเป็น — เป็น Frappe App ไม่ใช่แกะซอร์ส</p>
+      </div>
+      <div class="card">
+        <h3>ระยะที่ 3 — ย้ายข้อมูลและทดสอบ</h3>
+        <p>ย้ายข้อมูลหลักจาก Excel/ระบบเดิม ตรวจสอบยอดกับงบทดลอง และทดสอบร่วมกับทีมคุณก่อนจริง</p>
+      </div>
+      <div class="card">
+        <h3>ระยะที่ 4 — อบรม ขึ้นระบบ และดูแล</h3>
+        <p>อบรมผู้ใช้ ขึ้นระบบจริง (go-live) อยู่เป็นเพื่อน 30 วัน และต่อด้วยสัญญา Support/AMC</p>
+      </div>
+    </div>
+    <p style="margin-top: 2rem">
+      <a href="/services/"><b>ดูรายละเอียดกระบวนการทั้งหมด →</b></a>
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>พร้อมเริ่มต้นหรือยัง? คุยกับเราก่อน 30 นาที ไม่มีการขาย</h2>
+      <p>
+        บอกเราว่าธุรกิจคุณทำอะไร มีกี่คน ใช้ระบบอะไรอยู่ เราจะประเมินคร่าว ๆ ว่าการวางระบบ
+        ERPNext เหมาะกับคุณหรือไม่ พร้อมประมาณการขอบเขตงานและค่าใช้จ่าย — ได้เอกสารติดตัวกลับไปฟรี
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn--lg" href="/contact/">นัดหมายปรึกษาฟรี</a>
+        <a class="btn btn--ghost btn--lg" href="mailto:sales@flo-works.co">sales@flo-works.co</a>
+      </div>
+    </div>
+  </section>
+</Base>
