@@ -1,15 +1,17 @@
 :root {
-  --bg: #faf9f6;
-  --fg: #1f1d1a;
-  --muted: #5f5a52;
-  --line: #e7e3da;
-  --line-strong: #1f1d1a;
-  --accent: #1f6b4f;
+  --bg: #ffffff;
+  --fg: #32373c;
+  --muted: #5e6a66;
+  --line: #e2e9e6;
+  --line-strong: #32373c;
+  --accent: #016654;
+  --accent-soft: #aee1d4;
   --accent-ink: #ffffff;
   --maxw: 1080px;
-  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans Thai", "Sarabun", "IBM Plex Sans Thai",
-    "Leelawadee UI", "Tahoma", sans-serif;
+  --font: "Quicksand", "Sarabun", "Noto Sans Thai",
+    "Leelawadee UI", "Tahoma", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-head: Georgia, "Noto Serif Thai", "Times New Roman", serif;
   --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas,
     "Courier New", monospace;
 }
@@ -67,8 +69,9 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-head);
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.01em;
   text-wrap: balance;
 }
@@ -123,16 +126,17 @@ hr {
 /* ---------- buttons ---------- */
 .btn {
   display: inline-block;
-  border: 1.5px solid var(--fg);
-  background: var(--fg);
-  color: var(--bg);
+  border: 1.5px solid var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
   padding: 0.7rem 1.4rem;
   font-family: var(--font);
   font-size: 1rem;
   font-weight: 600;
+  border-radius: 999px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .btn:hover {
@@ -144,7 +148,7 @@ hr {
 
 .btn--ghost {
   background: transparent;
-  color: var(--fg);
+  color: var(--accent);
 }
 
 .btn--ghost:hover {
@@ -163,7 +167,7 @@ hr {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 249, 246, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
@@ -324,6 +328,7 @@ hr {
 
 .card {
   border: 1px solid var(--line);
+  border-radius: 16px;
   padding: 1.6rem;
   background: var(--bg);
 }
@@ -357,13 +362,13 @@ hr {
 }
 
 .compare thead th {
-  background: #f3f1eb;
+  background: #eef6f3;
   font-weight: 700;
 }
 
 .compare .is-best td,
 .compare .is-best th {
-  background: #f5f3ed;
+  background: #f2f9f6;
 }
 
 .compare .check {
@@ -391,7 +396,7 @@ hr {
   content: "0" counter(step);
   font-family: var(--mono);
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--accent);
   padding-top: 0.35rem;
 }
 
@@ -422,10 +427,12 @@ hr {
 }
 
 .tags li {
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
   padding: 0.3rem 0.85rem;
   font-size: 0.9rem;
   font-weight: 600;
+  color: var(--accent);
 }
 
 /* ---------- FAQ ---------- */
@@ -447,7 +454,7 @@ hr {
 .faq summary::before {
   content: "+ ";
   font-family: var(--mono);
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .faq details[open] summary::before {
@@ -514,7 +521,7 @@ hr {
 .article-body blockquote {
   margin: 1.5rem 0;
   padding-left: 1.2rem;
-  border-left: 3px solid var(--fg);
+  border-left: 3px solid var(--accent);
   color: var(--muted);
 }
 
@@ -535,14 +542,15 @@ hr {
 .article-body code {
   font-family: var(--mono);
   font-size: 0.88em;
-  background: #f1eee7;
+  background: #eef6f3;
+  color: #014a3c;
   padding: 0.1em 0.35em;
 }
 
 /* ---------- CTA band ---------- */
 .cta-band {
-  background: var(--fg);
-  color: var(--bg);
+  background: var(--accent);
+  color: #ffffff;
   padding: 3.6rem 0;
 }
 
@@ -551,29 +559,31 @@ hr {
 }
 
 .cta-band p {
-  color: #cfcfcf;
+  color: #dcefe8;
   max-width: 60ch;
 }
 
 .cta-band .btn {
-  border-color: var(--bg);
-  background: var(--bg);
-  color: var(--fg);
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--accent);
 }
 
 .cta-band .btn:hover {
-  background: transparent;
-  color: var(--bg);
+  background: var(--accent-soft);
+  border-color: var(--accent-soft);
+  color: var(--accent);
 }
 
 .cta-band .btn--ghost {
   background: transparent;
-  color: var(--bg);
+  color: #ffffff;
 }
 
 .cta-band .btn--ghost:hover {
-  background: var(--bg);
-  color: var(--fg);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--accent);
 }
 
 /* ---------- footer ---------- */
@@ -658,13 +668,21 @@ hr {
 .form-field select,
 .form-field textarea {
   width: 100%;
-  border: 1px solid var(--line-strong);
-  border-radius: 0;
-  background: var(--bg);
+  border: 1px solid #cfdcd7;
+  border-radius: 10px;
+  background: #ffffff;
   color: var(--fg);
   padding: 0.7rem 0.9rem;
   font-family: var(--font);
   font-size: 1rem;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(1, 102, 84, 0.15);
 }
 
 .form-field textarea {
